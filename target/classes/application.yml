@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: springboot-shiro
+  datasource:
+    initial-size: 10
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.136:3306/haoxy_test?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
+    username: root
+    password: adminadmin
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    max-active: 100
+    validation-query: SELECT 1
+    test-on-borrow: true
+    test-while-idle: true
+    time-between-eviction-runs-millis: 5000
+    min-evictable-idle-time-millis: 60000
+server:
+  port: 2335
