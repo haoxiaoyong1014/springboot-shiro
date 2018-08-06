@@ -1,8 +1,9 @@
 package com.haoxy.shrio.mapper;
 
-import com.haoxy.shrio.model.Role;
 import com.haoxy.shrio.model.RoleExample;
 import java.util.List;
+
+import com.haoxy.shrio.model.SysRole;
 import org.apache.ibatis.annotations.Param;
 
 public interface RoleMapper {
@@ -10,13 +11,21 @@ public interface RoleMapper {
 
     int deleteByExample(RoleExample example);
 
-    int insert(Role record);
+    int deleteByPrimaryKey(Integer id);
 
-    int insertSelective(Role record);
+    int insert(SysRole record);
 
-    List<Role> selectByExample(RoleExample example);
+    int insertSelective(SysRole record);
 
-    int updateByExampleSelective(@Param("record") Role record, @Param("example") RoleExample example);
+    List<SysRole> selectByExample(RoleExample example);
 
-    int updateByExample(@Param("record") Role record, @Param("example") RoleExample example);
+    SysRole selectByPrimaryKey(Integer id);
+
+    int updateByExampleSelective(@Param("record") SysRole record, @Param("example") RoleExample example);
+
+    int updateByExample(@Param("record") SysRole record, @Param("example") RoleExample example);
+
+    int updateByPrimaryKeySelective(SysRole record);
+
+    int updateByPrimaryKey(SysRole record);
 }

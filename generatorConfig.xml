@@ -12,8 +12,8 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 
-        <jdbcConnection connectionURL="jdbc:mysql://192.168.1.136:3306/haoxy_test"
-                        driverClass="com.mysql.jdbc.Driver" password="adminadmin" userId="root" />
+        <jdbcConnection connectionURL="jdbc:mysql://115.29.32.62:3306/haoxy"
+                        driverClass="com.mysql.jdbc.Driver" password="7d428bc667" userId="root" />
 
         <javaModelGenerator targetPackage="com.haoxy.shrio.model"
                             targetProject="src/main/java" >
@@ -30,33 +30,33 @@
                              targetProject="src/main/java" type="XMLMAPPER" >
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        <table tableName="t_permission" domainObjectName="Permission"
+        <table tableName="sys_permission" domainObjectName="Permission"
                enableCountByExample="true"
                enableUpdateByExample="true"
                enableDeleteByExample="true"
                enableSelectByExample="true"
                selectByExampleQueryId="true"
         ></table>
-        <table tableName="t_role" domainObjectName="Role"
+        <table tableName="sys_role" domainObjectName="Role"
                enableCountByExample="true"
                enableUpdateByExample="true"
                enableDeleteByExample="true"
                enableSelectByExample="true"
                selectByExampleQueryId="true"
         ></table>
-        <table tableName="t_user" domainObjectName="User"
+        <table tableName="user_info" domainObjectName="User"
                enableCountByExample="true"
                enableUpdateByExample="true"
                enableDeleteByExample="true"
                enableSelectByExample="true"
                selectByExampleQueryId="true"
         ></table>
-        <table tableName="t_user_role" domainObjectName="userRole"
+        <!--<table tableName="t_user_role" domainObjectName="userRole"
                enableCountByExample="true"
                enableUpdateByExample="true"
                enableDeleteByExample="true"
                enableSelectByExample="true"
                selectByExampleQueryId="true"
-        ></table>
+        ></table>-->
     </context>
 </generatorConfiguration>

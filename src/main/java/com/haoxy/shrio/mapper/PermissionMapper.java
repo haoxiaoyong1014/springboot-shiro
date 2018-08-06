@@ -1,22 +1,32 @@
 package com.haoxy.shrio.mapper;
 
-import com.haoxy.shrio.model.Permission;
 import com.haoxy.shrio.model.PermissionExample;
 import java.util.List;
+
+import com.haoxy.shrio.model.SysPermission;
 import org.apache.ibatis.annotations.Param;
 
 public interface PermissionMapper {
+
     long countByExample(PermissionExample example);
 
     int deleteByExample(PermissionExample example);
 
-    int insert(Permission record);
+    int deleteByPrimaryKey(Integer id);
 
-    int insertSelective(Permission record);
+    int insert(SysPermission record);
 
-    List<Permission> selectByExample(PermissionExample example);
+    int insertSelective(SysPermission record);
 
-    int updateByExampleSelective(@Param("record") Permission record, @Param("example") PermissionExample example);
+    List<SysPermission> selectByExample(PermissionExample example);
 
-    int updateByExample(@Param("record") Permission record, @Param("example") PermissionExample example);
+    SysPermission selectByPrimaryKey(Integer id);
+
+    int updateByExampleSelective(@Param("record") SysPermission record, @Param("example") PermissionExample example);
+
+    int updateByExample(@Param("record") SysPermission record, @Param("example") PermissionExample example);
+
+    int updateByPrimaryKeySelective(SysPermission record);
+
+    int updateByPrimaryKey(SysPermission record);
 }

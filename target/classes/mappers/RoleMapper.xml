@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.haoxy.shrio.mapper.userRoleMapper">
-  <resultMap id="BaseResultMap" type="com.haoxy.shrio.model.userRole">
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+<mapper namespace="com.haoxy.shrio.mapper.RoleMapper">
+  <resultMap id="BaseResultMap" type="com.haoxy.shrio.model.SysRole">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="available" jdbcType="BIT" property="available" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -64,16 +66,16 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    user_id, role_id
+    id, available, description, role
   </sql>
-  <select id="selectByExample" parameterType="com.haoxy.shrio.model.userRoleExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.haoxy.shrio.model.RoleExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     'true' as QUERYID,
     <include refid="Base_Column_List" />
-    from t_user_role
+    from sys_role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -81,49 +83,79 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.haoxy.shrio.model.userRoleExample">
-    delete from t_user_role
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_role
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_role
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.haoxy.shrio.model.RoleExample">
+    delete from sys_role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.haoxy.shrio.model.userRole">
-    insert into t_user_role (user_id, role_id)
-    values (#{userId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER})
+  <insert id="insert" parameterType="com.haoxy.shrio.model.SysRole">
+    insert into sys_role (id, available, description, 
+      role)
+    values (#{id,jdbcType=INTEGER}, #{available,jdbcType=BIT}, #{description,jdbcType=VARCHAR}, 
+      #{role,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.haoxy.shrio.model.userRole">
-    insert into t_user_role
+  <insert id="insertSelective" parameterType="com.haoxy.shrio.model.SysRole">
+    insert into sys_role
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        user_id,
+      <if test="id != null">
+        id,
       </if>
-      <if test="roleId != null">
-        role_id,
+      <if test="available != null">
+        available,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="role != null">
+        role,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userId != null">
-        #{userId,jdbcType=INTEGER},
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
       </if>
-      <if test="roleId != null">
-        #{roleId,jdbcType=INTEGER},
+      <if test="available != null">
+        #{available,jdbcType=BIT},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null">
+        #{role,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.haoxy.shrio.model.userRoleExample" resultType="java.lang.Long">
-    select count(*) from t_user_role
+  <select id="countByExample" parameterType="com.haoxy.shrio.model.RoleExample" resultType="java.lang.Long">
+    select count(*) from sys_role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update t_user_role
+    update sys_role
     <set>
-      <if test="record.userId != null">
-        user_id = #{record.userId,jdbcType=INTEGER},
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.roleId != null">
-        role_id = #{record.roleId,jdbcType=INTEGER},
+      <if test="record.available != null">
+        available = #{record.available,jdbcType=BIT},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.role != null">
+        role = #{record.role,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -131,11 +163,35 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update t_user_role
-    set user_id = #{record.userId,jdbcType=INTEGER},
-      role_id = #{record.roleId,jdbcType=INTEGER}
+    update sys_role
+    set id = #{record.id,jdbcType=INTEGER},
+      available = #{record.available,jdbcType=BIT},
+      description = #{record.description,jdbcType=VARCHAR},
+      role = #{record.role,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.haoxy.shrio.model.SysRole">
+    update sys_role
+    <set>
+      <if test="available != null">
+        available = #{available,jdbcType=BIT},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null">
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.haoxy.shrio.model.SysRole">
+    update sys_role
+    set available = #{available,jdbcType=BIT},
+      description = #{description,jdbcType=VARCHAR},
+      role = #{role,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
