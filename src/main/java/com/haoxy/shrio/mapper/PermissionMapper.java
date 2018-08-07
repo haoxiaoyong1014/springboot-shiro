@@ -5,7 +5,9 @@ import java.util.List;
 
 import com.haoxy.shrio.model.SysPermission;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PermissionMapper {
 
     long countByExample(PermissionExample example);
@@ -29,4 +31,6 @@ public interface PermissionMapper {
     int updateByPrimaryKeySelective(SysPermission record);
 
     int updateByPrimaryKey(SysPermission record);
+
+
 }

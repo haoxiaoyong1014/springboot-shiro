@@ -1,5 +1,7 @@
 package com.haoxy.shrio.mapper;
 
+import com.haoxy.shrio.model.SysPermission;
+import com.haoxy.shrio.model.SysRole;
 import com.haoxy.shrio.model.UserExample;
 import com.haoxy.shrio.model.UserInfo;
 import org.apache.ibatis.annotations.Param;
@@ -15,6 +17,10 @@ import java.util.List;
 public interface UserInfoMapper {
     /**通过username查找用户信息;*/
      UserInfo findByUsername(String username);
+
+    List<SysRole> findSysRoleByUsername(String username);
+
+    List<SysPermission> findSysPermissionByUid(Integer uid);
 
     /*long countByExample(UserExample example);
 

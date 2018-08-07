@@ -1,6 +1,10 @@
 package com.haoxy.shrio.service;
 
+import com.haoxy.shrio.model.SysPermission;
+import com.haoxy.shrio.model.SysRole;
 import com.haoxy.shrio.model.UserInfo;
+
+import java.util.List;
 
 /**
  * Created by haoxy on 2018/8/6.
@@ -9,5 +13,9 @@ import com.haoxy.shrio.model.UserInfo;
  */
 public interface UserInfoService {
 
+   List<SysRole> findSysRoleByUsername(String username);
+
    UserInfo findByUsername(String username);
+
+   List<SysPermission> findSysPermissionByUid(Integer uid);
 }

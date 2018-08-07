@@ -232,4 +232,14 @@
     <select id="findByUsername" parameterType="java.lang.String" resultType="com.haoxy.shrio.model.UserInfo">
    SELECT * FROM user_info u inner JOIN sys_user_role ur on u.uid=ur.uid INNER JOIN sys_role r on ur.role_id=r.id WHERE  username=#{username,jdbcType=VARCHAR}
   </select>
+    <select id="findSysRoleByUsername" parameterType="java.lang.String" resultType="com.haoxy.shrio.model.SysRole">
+        SELECT r.id,r.available,r.description,r.role FROM user_info u inner JOIN sys_user_role ur on u.uid=ur.uid INNER JOIN sys_role r on ur.role_id=r.id WHERE username=#{username,jdbcType=VARCHAR}
+    </select>
+    <select id="findSysPermissionByUid" parameterType="java.lang.Integer" resultType="com.haoxy.shrio.model.SysPermission">
+        SELECT sys_permission.id,sys_permission.available,sys_permission.`name`,sys_permission.parent_id,
+        sys_permission.parent_ids,sys_permission.permission,sys_permission.resource_type,sys_permission.url
+        FROM sys_permission  inner JOIN sys_role_permission  on sys_permission.id=sys_role_permission.permission_id
+        INNER JOIN sys_role on sys_role_permission.role_id=sys_role.id INNER JOIN sys_user_role on
+        sys_role.id=sys_user_role.role_id INNER JOIN user_info on sys_user_role.uid=#{uid,jdbcType=INTEGER}
+    </select>
 </mapper>

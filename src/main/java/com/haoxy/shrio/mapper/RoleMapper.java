@@ -5,7 +5,9 @@ import java.util.List;
 
 import com.haoxy.shrio.model.SysRole;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface RoleMapper {
     long countByExample(RoleExample example);
 
@@ -28,4 +30,6 @@ public interface RoleMapper {
     int updateByPrimaryKeySelective(SysRole record);
 
     int updateByPrimaryKey(SysRole record);
+
+
 }

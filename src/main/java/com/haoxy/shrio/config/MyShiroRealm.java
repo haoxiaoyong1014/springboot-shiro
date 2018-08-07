@@ -3,6 +3,8 @@ package com.haoxy.shrio.config;
 import com.haoxy.shrio.model.SysPermission;
 import com.haoxy.shrio.model.SysRole;
 import com.haoxy.shrio.model.UserInfo;
+import com.haoxy.shrio.service.PermissionService;
+import com.haoxy.shrio.service.RoleService;
 import com.haoxy.shrio.service.UserInfoService;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
@@ -16,6 +18,7 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by haoxy on 2018/8/6.
@@ -32,15 +35,18 @@ public class MyShiroRealm extends AuthorizingRealm {
     @Autowired
     private UserInfoService userInfoService;
 
+
     /*授权*/
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         UserInfo userInfo = (UserInfo) principalCollection.getPrimaryPrincipal();//getPrimaryPrincipal();
-        for (SysRole role : userInfo.getRoleList()) {
+        List<SysRole> sysRoleByUsername = userInfoService.findSysRoleByUsername(userInfo.getUsername());
+        for (SysRole role : sysRoleByUsername) {
             authorizationInfo.addRole(role.getRole());
-            for (SysPermission per : role.getPermissionList()) {
-                authorizationInfo.addStringPermission(per.getPermission());
+            List<SysPermission> permissions = userInfoService.findSysPermissionByUid(userInfo.getUid());
+            for (SysPermission permission : permissions) {
+                authorizationInfo.addStringPermission(permission.getPermission());
             }
         }
         return authorizationInfo;
