@@ -107,12 +107,13 @@ public class ShiroConfig {
         //r.setWarnLogCategory("example.MvcLogger");     // No default
         return r;
     }
-   /* @Bean
-    public BCryptCredentialsMatcher bCryptCredentialsMatcher() {
-        return new BCryptCredentialsMatcher(cacheManager());
-    }*/
     @Bean
     public CacheManager cacheManager(){
         return new MemoryConstrainedCacheManager();
     }
+    @Bean
+    public RetryLimitHashedCredentialsMatcher matcher(){
+        return new RetryLimitHashedCredentialsMatcher();
+    }
+
 }
