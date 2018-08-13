@@ -13,7 +13,7 @@
         </commentGenerator>
 
         <jdbcConnection connectionURL="jdbc:mysql://115.29.32.62:3306/haoxy"
-                        driverClass="com.mysql.jdbc.Driver" password="7d428bc667" userId="root" />
+                        driverClass="com.mysql.jdbc.Driver" password="" userId="root" />
 
         <javaModelGenerator targetPackage="com.haoxy.shrio.model"
                             targetProject="src/main/java" >
