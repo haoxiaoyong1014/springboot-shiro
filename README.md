@@ -31,4 +31,6 @@ springboot-shiro-v1.2.0(<a href="https://github.com/haoxiaoyong1014/springboot-s
 
 * 密码输错次数过多,暂停使用该账户
 
+* 开启 shiro 注解方式控制权限(如: 如@RequiresRoles,@RequiresPermissions)
+
 * 统一异常处理
