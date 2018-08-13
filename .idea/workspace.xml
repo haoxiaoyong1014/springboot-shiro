@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350e6a7b-051b-4508-b557-a6e7ee5aaa46" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/PermissionMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/RoleMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/403.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userInfo.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userInfoAdd.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userInfoDel.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,12 +15,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="425">
-                <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+              <first_editor relative-caret-position="525">
+                <caret line="21" column="100" lean-forward="true" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="100" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -48,11 +38,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="625">
               <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generatorConfig.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generatorConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-332">
+              <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -64,46 +64,6 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashedCredentialsMatcher.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/credential/HashedCredentialsMatcher.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1925">
-              <caret line="102" column="19" lean-forward="false" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="19" />
-              <folding>
-                <marker date="1532595948000" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1532595948000" expanded="false" signature="157:561" ph="..." />
-                <marker date="1532595948000" expanded="true" signature="822:979" ph="{...}" />
-                <marker date="1532595948000" expanded="true" signature="1043:1294" ph="{...}" />
-                <marker date="1532595948000" expanded="false" signature="1336:1347" ph=" { " />
-                <marker date="1532595948000" expanded="false" signature="1373:1379" ph=" }" />
-                <marker date="1532595948000" expanded="false" signature="1443:1454" ph=" { " />
-                <marker date="1532595948000" expanded="false" signature="1493:1499" ph=" }" />
-                <marker date="1532595948000" expanded="false" signature="1551:1562" ph=" { " />
-                <marker date="1532595948000" expanded="false" signature="1602:1608" ph=" }" />
-                <marker date="1532595948000" expanded="true" signature="1694:1773" ph="{...}" />
-                <marker date="1532595948000" expanded="true" signature="1779:1797" ph="/**...*/" />
-                <marker date="1532595948000" expanded="false" signature="1847:1858" ph=" { " />
-                <marker date="1532595948000" expanded="false" signature="1881:1887" ph=" }" />
-                <marker date="1532595948000" expanded="true" signature="1893:1911" ph="/**...*/" />
-                <marker date="1532595948000" expanded="false" signature="1977:1988" ph=" { " />
-                <marker date="1532595948000" expanded="false" signature="2017:2023" ph=" }" />
-                <marker date="1532595948000" expanded="false" signature="2059:2070" ph=" { " />
-                <marker date="1532595948000" expanded="false" signature="2097:2103" ph=" }" />
-                <marker date="1532595948000" expanded="true" signature="2159:2315" ph="{...}" />
-                <marker date="1532595948000" expanded="true" signature="2321:2339" ph="/**...*/" />
-                <marker date="1532595948000" expanded="false" signature="2411:2422" ph=" { " />
-                <marker date="1532595948000" expanded="false" signature="2450:2456" ph=" }" />
-                <marker date="1532595948000" expanded="true" signature="2519:3036" ph="{...}" />
-                <marker date="1532595948000" expanded="true" signature="3128:3353" ph="{...}" />
-                <marker date="1532595948000" expanded="true" signature="3452:3811" ph="{...}" />
-                <marker date="1532595948000" expanded="true" signature="3887:4250" ph="{...}" />
-                <marker date="1532595948000" expanded="true" signature="4348:4507" ph="{...}" />
-                <marker date="1532595948000" expanded="true" signature="4554:4678" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -219,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/haoxy/shrio/model/userRole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/haoxy/shrio/model/SysPermission.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/haoxy/shrio/model/UserInfo.java" />
-        <option value="$PROJECT_DIR$/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/haoxy/shrio/ShiroApp.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
@@ -251,6 +210,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/haoxy/shrio/config/ShiroConfig.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -930,16 +890,15 @@
       <updated>1533265347089</updated>
       <workItem from="1533265351340" duration="33150000" />
       <workItem from="1533864999372" duration="7325000" />
-      <workItem from="1534119369409" duration="2548000" />
+      <workItem from="1534119369409" duration="5067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43023000" />
+    <option name="totallyTimeSpent" value="45542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1002,13 +961,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userInfoDel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/haoxy/shrio/model/SysPermission.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -1390,22 +1342,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="425">
-            <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-332">
+          <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="525">
+            <caret line="21" column="100" lean-forward="true" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="100" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

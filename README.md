@@ -15,4 +15,20 @@ sql文件在根目录下
 
 登录admin账户，访问：http://127.0.0.1:2335/userInfo/userAdd显示用户添加界面，访问http://127.0.0.1:2335/userInfo/userDel显示403没有权限。上面这些操作时候触发MyShiroRealm.doGetAuthorizationInfo()这个方面，也就是权限校验的方法。
 
-前端页面很简单,主要是演示功能,演示的这些功能只是 shiro的冰山一角
+前端页面很简单,主要是演示功能,演示的这些功能只是 shiro的冰山一角, 
+
+**更多功能详见:**
+
+springboot-shiro-v1.2.0(<a href="https://github.com/haoxiaoyong1014/springboot-shiro-v1.2.0">加强版<a>)
+
+**支持功能:** 
+
+* 认证
+
+* 授权
+
+* rememberMe(记住我)
+
+* 密码输错次数过多,暂停使用该账户
+
+* 统一异常处理
